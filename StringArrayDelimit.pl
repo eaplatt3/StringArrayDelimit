@@ -12,35 +12,44 @@
 use strict;
 use warnings;
 
-
 my $string;
-my $n;
 my $output;
+my $delimit;
+
 # Function definition
 sub stringDelm {
    # get total number of arguments passed.
-   $n = scalar(@_);
-   
-
-   foreach $string (@_) {
-     $output = split('$n[0]' , $string;
-   }
-  
-return $output;
+     
+   $delimit = $_[0]; 	
+	
+   $output = join("$delimit", @_);
+	
+	#print "@_";
+	#print "$output";
+	
+	return $output;
 
 }
 
 # Function call
 
-print "Please enter 3 numbers, pressing return/enter after each \n";
+print "Please enter 1 Letter & 5 Strings, pressing return/enter after each \n";
 
+my $delimitor = <STDIN>;
 my $string1 = <STDIN>;
 my $string2 = <STDIN>;
-chomp $string;
-chomp $string;
+my $string3 = <STDIN>;
+my $string4 = <STDIN>;
+my $string5 = <STDIN>;
+chomp $delimitor;
+chomp $string1;
+chomp $string2;
+chomp $string3;
+chomp $string4;
+chomp $string5;
 
 
 
-stringDelm($string1, $string2);
-print " $output\n";
+stringDelm($delimitor, $string1, $string2, $string3, $string4, $string5);
+print "$output\n";
 
